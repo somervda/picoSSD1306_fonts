@@ -20,13 +20,15 @@ pcf = pcf8575.PCF8575(i2c, 0x20)
 for n in range(50):
     button=pcf.pin(0)
     oled.fill(0)
-    oled.line(0, 15, oled.width - 1, 15, 1)
-    wri = Writer(oled, freesansnum35, verbose=False)
     Writer.set_textpos(oled, 0, 0)
     oled.text("n: " + str(n),  40, 0)
+    oled.line(0, 15, oled.width - 1, 15, 1)
+    # Use writer to write using the larger font
+    wri = Writer(oled, freesansnum35, verbose=False)
     Writer.set_textpos(oled, 25, 0)
     wri.printstring(str(button))
     oled.show()
+    # pcf.pin(5,button)
     time.sleep(.2)
 
 oled.fill(0)
