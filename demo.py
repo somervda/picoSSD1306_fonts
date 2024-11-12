@@ -2,6 +2,12 @@ from writer import Writer
 from ssd1306 import SSD1306_I2C
 # Font file converted to a bitmap (for ascii 32-57) 35 pixel height works well for this display
 # See https://github.com/peterhinch/micropython-font-to-py
+
+
+#  Example of using an ssd1306 and supporting multiple size fonts
+#  and reading switches using a pcf8675 i2c device
+# See the link above to see how to create font files
+
 import freesansnum35
 from machine import Pin, I2C
 import pcf8575
