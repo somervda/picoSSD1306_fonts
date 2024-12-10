@@ -7,6 +7,7 @@ from ssd1306 import SSD1306_I2C
 #  Example of using an ssd1306 and supporting multiple size fonts
 #  and reading switches using a pcf8675 i2c device
 # See the link above to see how to create font files
+# https://github.com/mcauser/micropython-pcf8575
 
 import freesansnum35
 from machine import Pin, I2C
